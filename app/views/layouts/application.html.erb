@@ -6,9 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="<%= controller.controller_name %>">
+	<div id="banner">
+		<h1><%= @page_title || "Pragmatic Bookshelf" %></h1>
+	</div>
+	<div id="columns">
+		<div id="side">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Questions</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>
