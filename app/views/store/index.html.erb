@@ -1,25 +1,27 @@
 <div class="store-items">
-	<% if @counter > 5 %>
-		<p class="counter"><%= pluralize(@counter, "person") %></p>
-	<% end %>
-	<% if notice %>
-	<p id="notice"><%= notice %></p>
-	<% end %>
-
-	<h2>Your Pragmatic Catalog</h2>
+	<div class="jumbotron">
+		<h3>Your Pragmatic Catalog</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis </p>
+		<% if @counter > 5 %>
+			<p class="counter"><%= pluralize(@counter, "person") %></p>
+		<% end %>
+		<% if notice %>
+		<p id="notice"><%= notice %></p>
+		<% end %>
+	</div>
 
 	<% cache ['store', Product.latest] do %>
 		<% @products.each do |product| %>
 			<% cache ['entry', product] do %>
-				<div class="entry">
+				<div class="entry col-6 col-sm-6 col-lg-4">
 					<%= image_tag(product.image_url) %>
-					<h3><%= product.title %></h3>
+					<h4><%= product.title %></h4>
 					<%= sanitize(product.description) %>
 					<div class="price_line">
 						<span class="price">
 							<%= number_to_currency(product.price) %>
 						</span>
-						<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+						<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true, class: 'btn btn-default' %>
 					</div>
 				</div>
 			<% end %>

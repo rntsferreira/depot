@@ -6,22 +6,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
-	<div id="banner">
-		<h1><%= @page_title || "Pragmatic Bookshelf" %></h1>
-	</div>
-	<div id="columns">
-		<div id="side">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Questions</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Contact</a></li>
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Questions</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact</a></li>
 			</ul>
+			<h3><%= @page_title || "Pragmatic Bookshelf" %></h3>
 		</div>
-		<div id="main">
-			<%= yield %>
+		<div class="row marketing">
+			<div class="col-xs-12 col-sm-9">
+				<div id="main">
+					<%= yield %>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+				<div id="cart" class="list-group">
+					<%= render @cart %>
+				</div>
+			</div>
 		</div>
 	</div>
+	
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

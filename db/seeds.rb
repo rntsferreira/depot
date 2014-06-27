@@ -9,22 +9,16 @@ Product.delete_all
 
 Product.create!(title: 'Titulo Produto W',
 	description: 
-	%{<p>Ruby is the fastest growing and most exciting dynamic language
-        out there. If you need to get working programs delivered fast,
-        you should add Ruby to your toolbox.</p>},
+	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>},
     image_url: 'ruby.jpg',
     price: 49.95)
 Product.create!(title: 'Titulo Produto Y',
 	description: 
-	%{<p>Ruby is the fastest growing and most exciting dynamic language
-        out there. If you need to get working programs delivered fast,
-        you should add Ruby to your toolbox.</p>},
+	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>},
     image_url: 'rtp.jpg',
     price: 49.95)
 Product.create!(title: 'Titulo Produto Z',
 	description: 
-	%{<p>Ruby is the fastest growing and most exciting dynamic language
-        out there. If you need to get working programs delivered fast,
-        you should add Ruby to your toolbox.</p>},
+	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>},
     image_url: 'cs.jpg',
     price: 49.95)

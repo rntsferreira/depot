@@ -13,26 +13,5 @@
  *= require_tree .
  *= require_self
  */
- #banner, #columns, #side{
- 	float: left;
- 	width: 100%;
- }
- #banner h1 {
- 	text-align: center;
- }
 
- #banner img {
- 	float: left;
-}
-
-#columns ul {
-	padding: 0;
-	width: 300px;
-	margin: 0 auto;
-}
-
-#columns ul li {
-	display: inline;
-	float: left;
-	margin-right: 2em;
-}
+  
