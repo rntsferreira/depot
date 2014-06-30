@@ -9,16 +9,16 @@ Product.delete_all
 
 Product.create!(title: 'Titulo Produto W',
 	description: 
-	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>},
+	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</p>},
     image_url: 'ruby.jpg',
     price: 49.95)
 Product.create!(title: 'Titulo Produto Y',
 	description: 
-	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>},
+	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</p>},
     image_url: 'rtp.jpg',
     price: 49.95)
 Product.create!(title: 'Titulo Produto Z',
 	description: 
-	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>},
+	%{<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</p>},
     image_url: 'cs.jpg',
     price: 49.95)
