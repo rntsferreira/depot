@@ -13,7 +13,7 @@
 
   <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name, class: 'form-control'  %>
+    <%= f.text_field :name, size: 40, class: 'form-control'  %>
   </div>
   <div class="field form-group">
     <%= f.label :address %><br>
@@ -21,13 +21,13 @@
   </div>
   <div class="field form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email, class: 'form-control' %>
+    <%= f.text_field :email, size: 40, class: 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :pay_type %><br>
-    <%= f.text_field :pay_type, class: 'form-control' %>
+    <%= f.select(:pay_type, Order:: PAYMENT_TYPES, {prompt: 'Select a payment method'}, { :class => 'form-control' }) %>
   </div>
   <div class="actions">
-    <%= f.submit :class => 'btn btn-default' %>
+    <%= f.submit 'Place Order', :class => 'btn btn-default' %>
   </div>
 <% end %>
