@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: Tim Mello
+  name: Renato Ferreira
   address: MyText
-  email: tim@teste.com
+  email: rntsferreira@gmail.com
   pay_type: Check
 
 two:
