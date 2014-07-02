@@ -8,12 +8,13 @@
 <body class="<%= controller.controller_name %>">
 	<div class="container">
 		<div class="header">
-			<ul class="nav nav-pills pull-right">
-					<li><a href="/">Home</a></li>
-					<li><a href="#">Questions</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Contact</a></li>
-			</ul>
+			<% if session[:user_id] %>
+				<ul class="nav nav-pills pull-right">
+						<li><%= link_to 'Orders', orders_path %></li>
+						<li><%= link_to 'Products', products_path %></li>
+						<li><%= link_to 'Users', users_path %></li>
+				</ul>
+			<% end %>
 			<h3><%= @page_title || "Pragmatic Bookshelf" %></h3>
 		</div>
 		<div class="row marketing">
