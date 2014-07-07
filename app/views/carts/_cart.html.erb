@@ -8,5 +8,8 @@
   </tr>
 </table>
 
-<%= button_to "Checkout", new_order_path, method: :get, class: 'btn btn-default' %>
+<% if !@cart.line_items.empty? %>
+  <%= button_to "Checkout", new_order_path, method: :get, class: 'btn btn-default' %>  
+<% end %>
+
 <%= button_to 'Empty cart', cart, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
