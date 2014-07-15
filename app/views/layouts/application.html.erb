@@ -10,12 +10,14 @@
 		<div class="header">
 			<% if session[:user_id] %>
 				<ul class="nav nav-pills pull-right">
+						<li><%= link_to 'Admin', admin_path %></li>
 						<li><%= link_to 'Orders', orders_path %></li>
 						<li><%= link_to 'Products', products_path %></li>
 						<li><%= link_to 'Users', users_path %></li>
+						<li><%= link_to 'Logout', sessions_destroy_path %></li>
 				</ul>
 			<% end %>
-			<h3><%= @page_title || "Pragmatic Bookshelf" %></h3>
+			<h3><a href="/"><%= @page_title || "Pragmatic Bookshelf" %></a></h3>
 		</div>
 		<div class="row marketing">
 			<div class="col-xs-12 col-sm-9">
